@@ -1,0 +1,8 @@
+<ul>
+  <li *ngFor='let post of posts'
+  [ngClass] ="{ 'list-group-item': true,
+                'list-group-item-success': post.getLoveScore() >= 0,
+                'list-group-item-danger': post.getLoveScore() < 0}" >
+      <app-post-list-item-component  [post]="post"></app-post-list-item-component>
+  </li>
+</ul>
